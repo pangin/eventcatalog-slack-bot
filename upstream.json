@@ -17,9 +17,9 @@
     "pinnedAt": "2026-02-03T12:17:25Z",
     "pinnedTag": null,
     "fetched": "24560d010fcdd45b83c761d7c362c18a06841b8c",
-    "fetchedAt": "2026-09-02T05:59:15Z",
+    "fetchedAt": "2026-09-02T06:07:17Z",
     "integrated": "24560d010fcdd45b83c761d7c362c18a06841b8c",
-    "integratedAt": "2026-09-02T05:59:15Z"
+    "integratedAt": "2026-09-02T06:07:17Z"
   },
   "owner": {
     "github": "pangin",
@@ -38,13 +38,9 @@
   },
   "licenseBoundary": {
     "root": "사유(Proprietary) — LICENSE 파일 없음, README: 'Copyright EventCatalog Ltd. All rights reserved. Usage requires a valid EventCatalog Scale license'",
-    "commercialPaths": [
-      "저장소 전체"
-    ],
+    "commercialPaths": ["저장소 전체"],
     "productionRestriction": "Scale license 없이는 실행 불가",
-    "licenseKeyEnvVars": [
-      "EVENTCATALOG_SCALE_LICENSE_KEY"
-    ],
+    "licenseKeyEnvVars": ["EVENTCATALOG_SCALE_LICENSE_KEY"],
     "ossOnlyPolicy": "빌드·테스트만.",
     "licenseFiles": [],
     "noticeFiles": []
@@ -52,10 +48,7 @@
   "build": {
     "node": "22.x",
     "packageManager": "Not",
-    "lockfiles": [
-      "package-lock.json",
-      "pnpm-lock.yaml"
-    ],
+    "lockfiles": ["package-lock.json", "pnpm-lock.yaml"],
     "install": "npm ci",
     "build": "npm run build",
     "test": "npm run format:diff && npm run test:run",
@@ -87,11 +80,6 @@
     "appliedAt": null,
     "note": "GitHub rulesets on public repos (Free plan). appliedAt is filled when rulesets are active."
   },
-  "linear": [
-    "GONG-871",
-    "GONG-872",
-    "GONG-876",
-    "GONG-875"
-  ],
-  "generatedAt": "2026-09-02T05:59:15Z"
+  "linear": ["GONG-871", "GONG-872", "GONG-876", "GONG-875"],
+  "generatedAt": "2026-09-02T06:07:17Z"
 }
