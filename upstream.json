@@ -1,0 +1,97 @@
+{
+  "$comment": "Machine-readable upstream metadata. Human guide: UPSTREAM.md. Updated by .github/workflows/upstream-sync.yml (sha.fetched/integrated) — never edit sha.pinned.",
+  "repository": "pangin/eventcatalog-slack-bot",
+  "upstream": {
+    "url": "https://github.com/event-catalog/eventcatalog-slack-bot.git",
+    "web": "https://github.com/event-catalog/eventcatalog-slack-bot",
+    "defaultBranch": "main",
+    "relation": "github-fork (public, inside the fork network)"
+  },
+  "branches": {
+    "main": "main",
+    "vendor": "vendor/upstream-main",
+    "syncBranchPrefix": "sync/upstream-"
+  },
+  "sha": {
+    "pinned": "24560d010fcdd45b83c761d7c362c18a06841b8c",
+    "pinnedAt": "2026-02-03T12:17:25Z",
+    "pinnedTag": null,
+    "fetched": "24560d010fcdd45b83c761d7c362c18a06841b8c",
+    "fetchedAt": "2026-09-02T05:59:15Z",
+    "integrated": "24560d010fcdd45b83c761d7c362c18a06841b8c",
+    "integratedAt": "2026-09-02T05:59:15Z"
+  },
+  "owner": {
+    "github": "pangin",
+    "name": "성욱 (pangin)"
+  },
+  "sync": {
+    "cadence": "매주 월요일 00:00 UTC (09:00 KST) 예약 실행 + workflow_dispatch 수동 실행",
+    "workflow": ".github/workflows/upstream-sync.yml",
+    "identity": "deploy key \"upstream-sync\" (secret UPSTREAM_SYNC_SSH_KEY); fallback GITHUB_TOKEN with warning",
+    "mergeStrategy": "merge commit only (squash/rebase disabled at repository level)",
+    "botPushesMain": false
+  },
+  "role": {
+    "classification": "excluded",
+    "reason": "EventCatalog MCP 엔드포인트에 연결하는 독립 Slack 봇(사유 소프트웨어, Scale license 필수). core clean run의 직접 의존이 아니며 스택 구성요소로서 사용자 지시에 따라 fork."
+  },
+  "licenseBoundary": {
+    "root": "사유(Proprietary) — LICENSE 파일 없음, README: 'Copyright EventCatalog Ltd. All rights reserved. Usage requires a valid EventCatalog Scale license'",
+    "commercialPaths": [
+      "저장소 전체"
+    ],
+    "productionRestriction": "Scale license 없이는 실행 불가",
+    "licenseKeyEnvVars": [
+      "EVENTCATALOG_SCALE_LICENSE_KEY"
+    ],
+    "ossOnlyPolicy": "빌드·테스트만.",
+    "licenseFiles": [],
+    "noticeFiles": []
+  },
+  "build": {
+    "node": "22.x",
+    "packageManager": "Not",
+    "lockfiles": [
+      "package-lock.json",
+      "pnpm-lock.yaml"
+    ],
+    "install": "npm ci",
+    "build": "npm run build",
+    "test": "npm run format:diff && npm run test:run",
+    "run": "node dist/index.js [--config ./eventcatalog-bot.config.ts] (Slack Socket Mode worker)",
+    "smoke": "node dist/index.js --help / --version 이 0으로 종료(라이선스 검사 전 단계)",
+    "verifyWorkflow": ".github/workflows/fork-verify.yml"
+  },
+  "upstreamWorkflows": [
+    {
+      "file": ".github/workflows/ci.yml",
+      "triggers": "push to main; pull_request targeting main",
+      "guardedToUpstreamRepo": false
+    }
+  ],
+  "protection": {
+    "main": [
+      "pull-request-only",
+      "required review 1 (admin bypass for PR merge)",
+      "required checks: Fork Verify jobs",
+      "merge commit only",
+      "no force-push",
+      "no deletion"
+    ],
+    "vendor/upstream-main": [
+      "updates only by sync identity (deploy key)",
+      "no force-push",
+      "no deletion"
+    ],
+    "appliedAt": null,
+    "note": "GitHub rulesets on public repos (Free plan). appliedAt is filled when rulesets are active."
+  },
+  "linear": [
+    "GONG-871",
+    "GONG-872",
+    "GONG-876",
+    "GONG-875"
+  ],
+  "generatedAt": "2026-09-02T05:59:15Z"
+}
