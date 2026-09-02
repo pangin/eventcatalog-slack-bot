@@ -17,9 +17,9 @@
     "pinnedAt": "2026-02-03T12:17:25Z",
     "pinnedTag": null,
     "fetched": "24560d010fcdd45b83c761d7c362c18a06841b8c",
-    "fetchedAt": "2026-09-02T06:07:17Z",
+    "fetchedAt": "2026-09-02T06:12:59Z",
     "integrated": "24560d010fcdd45b83c761d7c362c18a06841b8c",
-    "integratedAt": "2026-09-02T06:07:17Z"
+    "integratedAt": "2026-09-02T06:12:59Z"
   },
   "owner": {
     "github": "pangin",
@@ -72,14 +72,10 @@
       "no force-push",
       "no deletion"
     ],
-    "vendor/upstream-main": [
-      "updates only by sync identity (deploy key)",
-      "no force-push",
-      "no deletion"
-    ],
+    "vendor/upstream-main": ["updates only by sync identity (deploy key)", "no force-push", "no deletion"],
     "appliedAt": null,
     "note": "GitHub rulesets on public repos (Free plan). appliedAt is filled when rulesets are active."
   },
   "linear": ["GONG-871", "GONG-872", "GONG-876", "GONG-875"],
-  "generatedAt": "2026-09-02T06:07:17Z"
+  "generatedAt": "2026-09-02T06:12:59Z"
 }
